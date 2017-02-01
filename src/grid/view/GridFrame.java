@@ -31,5 +31,12 @@ public class GridFrame extends JFrame
 	{
 		return this.gridPanel;
 	}
+	
+	public GridController getBaseController() {
+		return baseController;
+	}
 
+	public void setBaseController(GridController baseController) {
+		this.baseController = baseController;
+	}
 }

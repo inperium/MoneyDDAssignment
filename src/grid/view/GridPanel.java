@@ -22,7 +22,15 @@ public class GridPanel extends JPanel {
 	private JButton submitButton;
 	private SpringLayout baseLayout;
 	private GridController baseController;
+	
+	public GridController getBaseController() {
+		return baseController;
+	}
 
+	public void setBaseController(GridController baseController) {
+		this.baseController = baseController;
+	}
+	
 	private JTable gridTable;
 	private JScrollPane gridPane;
 	
@@ -35,7 +43,6 @@ public class GridPanel extends JPanel {
 		setupPanel();
 		setupLayout();
 		setupListners();
-
 }
 
 	private void setupTable() {
@@ -52,7 +59,7 @@ public class GridPanel extends JPanel {
 	}
 
 	private void setupLayout() {
-
+		
 	}
 
 	private void setupPanel() {
