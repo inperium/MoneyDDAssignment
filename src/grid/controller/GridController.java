@@ -8,11 +8,11 @@ public class GridController {
 	
 	private Money [][] dollars;
 
-	private GridFrame gridFrame;
+	private GridFrame frame;
 	
 	public GridController(){
 		this.dollars = new Money[5][4];
-		gridFrame = new GridFrame(null);
+		frame = new frame(null);
 		populationizer();
 	}
 
@@ -29,11 +29,19 @@ public class GridController {
 		}
 	}
 	
-	public Money[][] getDollars() {
+	public Money[][] getGrid() {
 		return dollars;
 	}
 
 	public void setDollars(Money[][] dollars) {
 		this.dollars = dollars;
+	}
+	
+	public GridFrame getFrame() {
+		return frame;
+	}
+
+	public void setGridFrame(GridFrame gridFrame) {
+		this.frame = gridFrame;
 	}
 }

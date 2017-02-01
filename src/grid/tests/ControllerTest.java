@@ -1,7 +1,6 @@
 package grid.tests;
 
 import static org.junit.Assert.*;
-
 import org.junit.*;
 import grid.controller.GridController;
 import grid.view.GridFrame;
