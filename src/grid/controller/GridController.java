@@ -1,7 +1,7 @@
 package grid.controller;
 
 import grid.view.GridFrame;
-import grid.view.GridPanel;
+
 import grid.model.Money;
 
 public class GridController {
@@ -11,12 +11,22 @@ public class GridController {
 	private GridFrame gridFrame;
 	
 	public GridController(){
-		setDollars(dollars);
+		this.dollars = new Money[5][4];
 		gridFrame = new GridFrame(null);
+		populationizer();
 	}
 
 	public void start() {
-			
+
+	}
+	
+	public void populationizer() {
+		for (int row=0; row<dollars.length; row++){
+			for (int col=0; col < dollars[0].length; col++){
+				//Money = 
+				//dollars[row][col] = Money;
+			}
+		}
 	}
 	
 	public Money[][] getDollars() {
