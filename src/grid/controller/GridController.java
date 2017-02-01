@@ -23,8 +23,8 @@ public class GridController {
 	public void populationizer() {
 		for (int row=0; row<dollars.length; row++){
 			for (int col=0; col < dollars[0].length; col++){
-				//Money = 
-				//dollars[row][col] = Money;
+				Money worth = new Money();
+				dollars[row][col] = worth;
 			}
 		}
 	}
