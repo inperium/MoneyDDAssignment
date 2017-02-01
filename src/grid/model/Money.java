@@ -2,15 +2,13 @@ package grid.model;
 
 public class Money {
 	
-	private int worth;
-	
 	public Money(){
-		int worth = (int) ((Math.random()) * 1000);
 		toString();
 	}
 	
 	public String toString()
 	{
+		int worth = (int) (Math.random());
 		return "The worth is: " + worth;
 	}
 }
