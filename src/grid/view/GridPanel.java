@@ -53,7 +53,7 @@ public class GridPanel extends JPanel {
 
 	private void setupTable() {
 		DefaultTableModel data = new DefaultTableModel(baseController.getGrid(),
-				new String[] { "Person One", "Person Two", "Person Three" });
+				new String[] { "Bank One", "Bank Two", "Bank Three", "Bank Four", "Bank Five" });
 		gridTable = new JTable(data);
 		gridPane = new JScrollPane(gridTable);
 	}
