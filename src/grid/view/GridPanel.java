@@ -7,12 +7,12 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
-import javax.swing.table.*;
+import javax.swing.table.DefaultTableModel;
 
 import grid.controller.GridController;
 
 public class GridPanel extends JPanel {
-		
+
 	private JTextField rowField;
 	private JTextField columnField;
 	private JTextField inputField;
@@ -22,7 +22,7 @@ public class GridPanel extends JPanel {
 	private JButton submitButton;
 	private SpringLayout baseLayout;
 	private GridController baseController;
-	
+
 	public GridController getBaseController() {
 		return baseController;
 	}
@@ -30,46 +30,50 @@ public class GridPanel extends JPanel {
 	public void setBaseController(GridController baseController) {
 		this.baseController = baseController;
 	}
-	
+
 	private JTable gridTable;
 	private JScrollPane gridPane;
-	
+
 	public GridPanel(GridController baseController) {
 		this.baseController = baseController;
 		this.baseLayout = new SpringLayout();
 		this.columnField = new JTextField(5);
+		this.rowField = new JTextField();
+		this.inputField = new JTextField(15);
+		this.rowLabel = new JLabel();
+		this.columnLabel = new JLabel();
+		this.inputLabel = new JLabel();
+		this.submitButton = new JButton();
 
 		setupTable();
 		setupPanel();
 		setupLayout();
-		setupListners();
-}
-
-	private void setupTable() {
-		DefaultTableModel data = new DefaultTableModel(baseController.getGrid(), new String []{"one", "two", "three", "four", "five"});
-		gridTable = new JTable();
-		gridTable.setModel(data);
-		gridPane = new JScrollPane();
-		gridPane.setViewportView(gridTable);
-		
+		setupListeners();
 	}
 
-	private void setupListners() {
+	private void setupTable() {
+		DefaultTableModel data = new DefaultTableModel(baseController.getGrid(),
+				new String[] { "Person One", "Person Two", "Person Three" });
+		gridTable = new JTable(data);
+		gridPane = new JScrollPane(gridTable);
+	}
+
+	private void setupListeners() {
 
 	}
 
 	private void setupLayout() {
-		
 	}
 
 	private void setupPanel() {
-		add(rowField);
-		add(columnField);
-		add(inputField);
-		add(rowLabel);
-		add(columnLabel);
-		add(inputLabel);
-		add(submitButton);
-		this.setLayout(baseLayout);	
+		this.add(gridPane);
+		this.setLayout(baseLayout);
+		this.add(rowField);
+		this.add(columnField);
+		this.add(inputField);
+		this.add(rowLabel);
+		this.add(columnLabel);
+		this.add(inputLabel);
+		this.add(submitButton);
 	}
 }

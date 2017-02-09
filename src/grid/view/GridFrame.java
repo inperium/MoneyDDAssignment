@@ -24,6 +24,7 @@ public class GridFrame extends JFrame
 		this.setSize(650, 400);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
+		this.setContentPane(gridPanel);
 		this.setVisible(true);
 	}
 	

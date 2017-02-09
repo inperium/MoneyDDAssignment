@@ -12,8 +12,8 @@ public class GridController {
 	
 	public GridController(){
 		this.dollars = new Money[5][4];
-		frame = new GridFrame(null);
 		populationizer();
+		frame = new GridFrame(this);
 	}
 
 	public void start() {
@@ -39,9 +39,5 @@ public class GridController {
 	
 	public GridFrame getFrame() {
 		return frame;
-	}
-
-	public void setGridFrame(GridFrame gridFrame) {
-		this.frame = gridFrame;
 	}
 }

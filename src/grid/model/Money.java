@@ -8,7 +8,7 @@ public class Money {
 	
 	public String toString()
 	{
-		int worth = (int) (Math.random());
-		return "The worth is: " + worth;
+		int worth = (int) (Math.random())*10;
+		return "Client's worth: " + worth;
 	}
 }
