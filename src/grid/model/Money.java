@@ -2,13 +2,21 @@ package grid.model;
 
 public class Money {
 	
+	private int amount;
+	
 	public Money(){
-		toString();
+		this.amount = calculateWorth();
+	}
+	
+	public int calculateWorth()
+	{
+		int money = (int) ((Math.random())*10900);
+		return money;
 	}
 	
 	public String toString()
 	{
-		int worth = (int) ((Math.random())*10900);
-		return "Person: " + worth;
+		String value = "$  " +  String.valueOf(amount);
+		return value;
 	}
 }

@@ -78,7 +78,8 @@ public class GridPanel extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				int x = Integer.parseInt(rowField.getText());
 				int y = Integer.parseInt(columnField.getText());
-				gridTable.setValueAt(inputField.getText(), x, y);
+				String replace = "$ " + inputField.getText();
+				gridTable.setValueAt(replace, x, y);
 			}
 		});
 		
