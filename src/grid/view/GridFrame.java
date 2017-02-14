@@ -21,7 +21,7 @@ public class GridFrame extends JFrame
 	{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setTitle("Griddy");
-		this.setSize(650, 400);
+		this.setSize(800, 600);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
 		this.setContentPane(gridPanel);

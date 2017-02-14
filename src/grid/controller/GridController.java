@@ -11,7 +11,7 @@ public class GridController {
 	private GridFrame frame;
 	
 	public GridController(){
-		this.dollars = new Money[5][4];
+		this.dollars = new Money[5][5];
 		populationizer();
 		frame = new GridFrame(this);
 	}
